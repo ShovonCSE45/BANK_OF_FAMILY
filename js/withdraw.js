@@ -20,6 +20,11 @@ document.getElementById("withdraw_button").addEventListener("click", function ()
     const balanceTotalString = balanceTotalElement.innerText;
     const blanceTotal = parseFloat(balanceTotalString);
 
+    if(withdrawAmountNew > blanceTotal)
+    {
+        alert("Not available balance amount");
+    }
+
     const newBalanceAfterWithdraw = blanceTotal - withdrawAmount;
 
     balanceTotalElement.innerText = newBalanceAfterWithdraw;
